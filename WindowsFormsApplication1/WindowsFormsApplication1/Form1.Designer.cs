@@ -58,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxRecherche = new System.Windows.Forms.TextBox();
             this.buttonRecherche = new System.Windows.Forms.Button();
+            this.labelResultatRecherche = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -390,9 +391,21 @@
             this.buttonRecherche.UseVisualStyleBackColor = true;
             this.buttonRecherche.Click += new System.EventHandler(this.buttonRecherche_Click);
             // 
+            // labelResultatRecherche
+            // 
+            this.labelResultatRecherche.AutoSize = true;
+            this.labelResultatRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultatRecherche.Location = new System.Drawing.Point(76, 59);
+            this.labelResultatRecherche.Name = "labelResultatRecherche";
+            this.labelResultatRecherche.Size = new System.Drawing.Size(211, 25);
+            this.labelResultatRecherche.TabIndex = 9;
+            this.labelResultatRecherche.Text = "Resultat recherche : ";
+            this.labelResultatRecherche.Visible = false;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1284, 532);
+            this.Controls.Add(this.labelResultatRecherche);
             this.Controls.Add(this.buttonRecherche);
             this.Controls.Add(this.textBoxRecherche);
             this.Controls.Add(this.label1);
@@ -442,6 +455,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxRecherche;
         private System.Windows.Forms.Button buttonRecherche;
+        private System.Windows.Forms.Label labelResultatRecherche;
 
 
     }

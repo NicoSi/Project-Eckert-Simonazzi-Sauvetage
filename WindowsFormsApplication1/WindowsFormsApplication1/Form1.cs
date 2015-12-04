@@ -170,20 +170,31 @@ namespace WindowsFormsApplication1
             listeActiviteParDefaut.Add(exploration);
 
             Activités Test = new Activités("Toto", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
+            Activités Test2 = new Activités("Tata", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
 
             List<Activités> listeActiviteRecherche = new List<Activités>();
+            List<Activités> listeActiviteRecherche2 = new List<Activités>();
 
             listeActiviteRecherche.Add(Test);
+            listeActiviteRecherche2.Add(Test2);
 
             //Cette boucle implémente 500 jours pour la liste de jour
             for (int i = 0; i <= 499; i++)
             {
 
 
-                if(i==50){
+                if (i == 50 || i == 256 || i == 147 || i == 200 || i == 60 || i == 10 || i == 320 || i == 457 || i == 159 || i == 328 )
+                {
                     Jour j = new Jour(listeActiviteRecherche);
                     listeJourForm1.Add(j);
-                }else{
+                }else if (i == 51 || i == 143 || i == 98 || i == 254)
+                {
+                    Jour j = new Jour(listeActiviteRecherche2);
+                    listeJourForm1.Add(j);
+
+                }
+                else
+                {
 
                     Jour j = new Jour(listeActiviteParDefaut);
                     listeJourForm1.Add(j);
@@ -257,7 +268,111 @@ namespace WindowsFormsApplication1
 
         }
 
+        //Redonne la lisibilite au boutons qui ne l'était plus de part une recherche
+        public void boutonVisible()
+        {
+            if (nbJourAffichage == 7)
+            {
+                if (boutonJour1.Visible == false)
+                {
+                    boutonJour1.Visible = true;
+                }
+                if (boutonJour2.Visible == false)
+                {
+                    boutonJour2.Visible = true;
+                }
+                if (boutonJour3.Visible == false)
+                {
+                    boutonJour3.Visible = true;
+                }
+                if (boutonJour4.Visible == false)
+                {
+                    boutonJour4.Visible = true;
+                }
+                if (boutonJour5.Visible == false)
+                {
+                    boutonJour5.Visible = true;
+                }
+                if (boutonJour6.Visible == false)
+                {
+                    boutonJour6.Visible = true;
+                }
+                if (boutonJour7.Visible == false)
+                {
+                    boutonJour7.Visible = true;
+                }
+            }
 
+            if (nbJourAffichage == 14)
+            {
+                if (boutonJour8.Visible == false)
+                {
+                    boutonJour8.Visible = true;
+                }
+                if (boutonJour9.Visible == false)
+                {
+                    boutonJour8.Visible = true;
+                }
+                if (boutonJour9.Visible == false)
+                {
+                    boutonJour9.Visible = true;
+                }
+                if (boutonJour10.Visible == false)
+                {
+                    boutonJour10.Visible = true;
+                }
+                if (boutonJour11.Visible == false)
+                {
+                    boutonJour11.Visible = true;
+                }
+                if (boutonJour12.Visible == false)
+                {
+                    boutonJour12.Visible = true;
+                }
+                if (boutonJour13.Visible == false)
+                {
+                    boutonJour13.Visible = true;
+                }
+                if (boutonJour14.Visible == false)
+                {
+                    boutonJour14.Visible = true;
+                }
+
+            }
+
+            if (nbJourAffichage == 21)
+            {
+                if (boutonJour15.Visible == false)
+                {
+                    boutonJour15.Visible = true;
+                }
+                if (boutonJour16.Visible == false)
+                {
+                    boutonJour16.Visible = true;
+                }
+                if (boutonJour17.Visible == false)
+                {
+                    boutonJour17.Visible = true;
+                }
+                if (boutonJour18.Visible == false)
+                {
+                    boutonJour18.Visible = true;
+                }
+                if (boutonJour19.Visible == false)
+                {
+                    boutonJour19.Visible = true;
+                }
+                if (boutonJour20.Visible == false)
+                {
+                    boutonJour20.Visible = true;
+                }
+                if (boutonJour21.Visible == false)
+                {
+                    boutonJour21.Visible = true;
+                }
+
+            }
+        }
         
 
         /* Récupère le numéros des jours à partir du paramètre numJour et les affiche dans les boutons. 
@@ -265,16 +380,27 @@ namespace WindowsFormsApplication1
         public void afficherJour(int numJour)
         {
 
+           if (modeRecherche == true && listeJourRecherche.Count <= 7)
+           {
+               Precedent.Enabled = false;
+               suivant.Enabled = false;
+
+           }else
+           {
+               Precedent.Enabled = true;
+               suivant.Enabled = true;
+           }
+
 
             if (modeRecherche == true){
 
-                if (listeJourRecherche.Count > 0) { boutonJour1.Text = listeJourRecherche[numJour].GetidJour.ToString();}
-                if (listeJourRecherche.Count > 1) { boutonJour2.Text = listeJourRecherche[numJour + 1].GetidJour.ToString();}
-                if (listeJourRecherche.Count > 2) { boutonJour3.Text = listeJourRecherche[numJour + 2].GetidJour.ToString();}
-                if (listeJourRecherche.Count > 3) { boutonJour4.Text = listeJourRecherche[numJour + 3].GetidJour.ToString();}
-                if (listeJourRecherche.Count > 4) { boutonJour5.Text = listeJourRecherche[numJour + 4].GetidJour.ToString();}
-                if (listeJourRecherche.Count > 5) { boutonJour6.Text = listeJourRecherche[numJour + 5].GetidJour.ToString();}
-                if (listeJourRecherche.Count > 6) { boutonJour7.Text = listeJourRecherche[numJour + 6].GetidJour.ToString();}
+                if (listeJourRecherche.Count > numJour + 0) { boutonJour1.Text = listeJourRecherche[numJour].GetidJour.ToString(); } else { boutonJour1.Visible = false; }
+                if (listeJourRecherche.Count > numJour + 1) { boutonJour2.Text = listeJourRecherche[numJour + 1].GetidJour.ToString(); } else { boutonJour2.Visible = false; }
+                if (listeJourRecherche.Count > numJour + 2) { boutonJour3.Text = listeJourRecherche[numJour + 2].GetidJour.ToString(); } else { boutonJour3.Visible = false; }
+                if (listeJourRecherche.Count > numJour + 3) { boutonJour4.Text = listeJourRecherche[numJour + 3].GetidJour.ToString(); } else { boutonJour4.Visible = false; }
+                if (listeJourRecherche.Count > numJour + 4) { boutonJour5.Text = listeJourRecherche[numJour + 4].GetidJour.ToString(); } else { boutonJour5.Visible = false; }
+                if (listeJourRecherche.Count > numJour + 5) { boutonJour6.Text = listeJourRecherche[numJour + 5].GetidJour.ToString(); } else { boutonJour6.Visible = false; }
+                if (listeJourRecherche.Count > numJour + 6) { boutonJour7.Text = listeJourRecherche[numJour + 6].GetidJour.ToString(); } else { boutonJour7.Visible = false; }
 
             }else{
 
@@ -293,13 +419,13 @@ namespace WindowsFormsApplication1
             {
                 if (modeRecherche == true)
                 {
-                    if (listeJourRecherche.Count > 7) { boutonJour8.Text = listeJourRecherche[numJour + 7].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 8) { boutonJour9.Text = listeJourRecherche[numJour + 8].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 9) { boutonJour10.Text = listeJourRecherche[numJour + 9].GetidJour.ToString(); }
-                    if (listeJourRecherche.Count > 10) {boutonJour11.Text = listeJourRecherche[numJour + 10].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 11) {boutonJour12.Text = listeJourRecherche[numJour + 11].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 12) {boutonJour13.Text = listeJourRecherche[numJour + 12].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 13) {boutonJour14.Text = listeJourRecherche[numJour + 13].GetidJour.ToString();}
+                    if (listeJourRecherche.Count > numJour + 7) { boutonJour8.Text = listeJourRecherche[numJour + 7].GetidJour.ToString(); } else { boutonJour8.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 8) { boutonJour9.Text = listeJourRecherche[numJour + 8].GetidJour.ToString(); } else { boutonJour9.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 9) { boutonJour10.Text = listeJourRecherche[numJour + 9].GetidJour.ToString(); } else { boutonJour10.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 10) { boutonJour11.Text = listeJourRecherche[numJour + 10].GetidJour.ToString(); } else { boutonJour11.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 11) { boutonJour12.Text = listeJourRecherche[numJour + 11].GetidJour.ToString(); } else { boutonJour12.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 12) { boutonJour13.Text = listeJourRecherche[numJour + 12].GetidJour.ToString(); } else { boutonJour13.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 13) { boutonJour14.Text = listeJourRecherche[numJour + 13].GetidJour.ToString(); } else { boutonJour14.Visible = false; }
                 }
                 else
                 {
@@ -318,13 +444,13 @@ namespace WindowsFormsApplication1
             {
                 if (modeRecherche == true)
                 {
-                    if (listeJourRecherche.Count > 14) {boutonJour15.Text = listeJourRecherche[numJour + 14].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 15) {boutonJour16.Text = listeJourRecherche[numJour + 15].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 16) {boutonJour17.Text = listeJourRecherche[numJour + 16].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 17) {boutonJour18.Text = listeJourRecherche[numJour + 17].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 18) {boutonJour19.Text = listeJourRecherche[numJour + 18].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 19) {boutonJour20.Text = listeJourRecherche[numJour + 19].GetidJour.ToString();}
-                    if (listeJourRecherche.Count > 20) { boutonJour21.Text = listeJourRecherche[numJour + 20].GetidJour.ToString(); }
+                    if (listeJourRecherche.Count > numJour + 14) { boutonJour15.Text = listeJourRecherche[numJour + 14].GetidJour.ToString(); } else { boutonJour15.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 15) { boutonJour16.Text = listeJourRecherche[numJour + 15].GetidJour.ToString(); } else { boutonJour16.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 16) { boutonJour17.Text = listeJourRecherche[numJour + 16].GetidJour.ToString(); } else { boutonJour17.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 17) { boutonJour18.Text = listeJourRecherche[numJour + 17].GetidJour.ToString(); } else { boutonJour18.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 18) { boutonJour19.Text = listeJourRecherche[numJour + 18].GetidJour.ToString(); } else { boutonJour19.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 19) { boutonJour20.Text = listeJourRecherche[numJour + 19].GetidJour.ToString(); } else { boutonJour20.Visible = false; }
+                    if (listeJourRecherche.Count > numJour + 20) { boutonJour21.Text = listeJourRecherche[numJour + 20].GetidJour.ToString(); } else { boutonJour21.Visible = false; }
                 }
                 else
                 {
@@ -341,7 +467,19 @@ namespace WindowsFormsApplication1
 
             coloriseBouton();
 
-            if (jourPivot > (listeJourForm1.Count -1 - 21))
+            int tailleListe;
+
+            if(modeRecherche == true)
+            {
+                tailleListe = listeJourRecherche.Count;
+
+            }
+            else
+            {
+                tailleListe = listeJourForm1.Count;
+            }
+
+            if (jourPivot > (tailleListe - 1 - 21))
             {
 
                 affichage21Jours.Enabled = false;
@@ -353,7 +491,7 @@ namespace WindowsFormsApplication1
             }
 
 
-            if (jourPivot > (listeJourForm1.Count - 1 - 14))
+            if (jourPivot > (tailleListe - 1 - 14))
             {
 
                 affichage14Jours.Enabled = false;
@@ -376,6 +514,10 @@ namespace WindowsFormsApplication1
             int nombreDeJour = 0;
             bool termePresentDansJour = false;
             modeRecherche = true;
+
+            boutonVisible();
+
+            listeJourRecherche.Clear();
 
             foreach (Jour J in listeJourForm1)
             {
@@ -400,48 +542,67 @@ namespace WindowsFormsApplication1
             {
                 modeRecherche = true;
                 afficherJour(0);
+                labelResultatRecherche.Text = "Nombre de jour correspondant au résultat de la recherche : " + nombreDeJour.ToString();
+                labelResultatRecherche.Visible = true;
             }
             else
             {
                 MessageBox.Show("Votre recherche n'a donné aucun resultat", "Resultat recherche", MessageBoxButtons.OK);
                 modeRecherche = false;
                 afficherJour(0);
+                labelResultatRecherche.Text = "La recherche n'a donné aucun résultat";
+                labelResultatRecherche.Visible = true;
             }
         }
 
         //Bouton suivant, affiche les jours dans l'ordre chronlogique en fonction par page.
         private void suivant_Click(object sender, EventArgs e)
         {
-            if (jourPivot != 499 - nbJourAffichage)
+            int tailleListe;
+            if (modeRecherche == true)
             {
-                if (jourPivot < 490 && nbJourAffichage == 7)
+                tailleListe = listeJourRecherche.Count - 1;
+            }
+            else
+            {
+                tailleListe = listeJourForm1.Count - 1;
+            }
+
+            int limite7 = 7 + tailleListe % 7 -1;
+            int limite14 = 14 + tailleListe % 14 -1;
+            int limite21 = 21 + tailleListe % 21 -1;
+
+
+            if (jourPivot != tailleListe - nbJourAffichage)
+            {
+                if (jourPivot < (tailleListe - limite7-1) && nbJourAffichage == 7)
                 {
                     jourPivot = jourPivot + nbJourAffichage;
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot >= 490 && nbJourAffichage == 7)
+                else if (jourPivot >= (tailleListe - limite7-1) && nbJourAffichage == 7)
                 {
-                    jourPivot = jourPivot + (500 - jourPivot - nbJourAffichage);
+                    jourPivot = jourPivot + (tailleListe + 1 - jourPivot - nbJourAffichage);
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot < 475 && nbJourAffichage == 14)
+                else if (jourPivot < (tailleListe - limite14-1) && nbJourAffichage == 14)
                 {
                     jourPivot = jourPivot + nbJourAffichage;
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot >= 475 && nbJourAffichage == 14)
+                else if (jourPivot >= (tailleListe - limite14-1) && nbJourAffichage == 14)
                 {
-                    jourPivot = jourPivot + (500 - jourPivot - nbJourAffichage);
+                    jourPivot = jourPivot + (tailleListe + 1 - jourPivot - nbJourAffichage);
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot < 462 && nbJourAffichage == 21)
+                else if (jourPivot < (tailleListe - limite21-1) && nbJourAffichage == 21)
                 {
                     jourPivot = jourPivot + nbJourAffichage;
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot >= 462 && nbJourAffichage == 21)
+                else if (jourPivot >= (tailleListe - limite21-1) && nbJourAffichage == 21)
                 {
-                    jourPivot = jourPivot + (500 - jourPivot - nbJourAffichage);
+                    jourPivot = jourPivot + (tailleListe + 1 - jourPivot - nbJourAffichage);
                     afficherJour(jourPivot);
                 }
             }
@@ -457,6 +618,7 @@ namespace WindowsFormsApplication1
         //Bouton précedent
         private void Precedent_Click(object sender, EventArgs e)
         {
+
             if (nbJourAffichage == 7)
             {
                 if (jourPivot >= 7)
@@ -467,6 +629,7 @@ namespace WindowsFormsApplication1
                 else
                 {
                     jourPivot = jourPivot - jourPivot;
+                    afficherJour(jourPivot);
                 }
             }
             else if (nbJourAffichage == 14)
