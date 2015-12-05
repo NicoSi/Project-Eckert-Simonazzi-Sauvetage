@@ -45,7 +45,7 @@
             this.comboBoxHeureDebut = new System.Windows.Forms.ComboBox();
             this.comboBoxMinuteDebut = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNouveauLieu = new System.Windows.Forms.CheckBox();
             this.labelNomLieu = new System.Windows.Forms.Label();
             this.comboBoxListeLieu = new System.Windows.Forms.ComboBox();
             this.labelLieuCoordonneeX = new System.Windows.Forms.Label();
@@ -222,16 +222,16 @@
             this.label1.Text = "H";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // checkBox1
+            // checkBoxNouveauLieu
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(27, 411);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(144, 17);
-            this.checkBox1.TabIndex = 33;
-            this.checkBox1.Text = "Ajouter un nouveau lieu :";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxNouveauLieu.AutoSize = true;
+            this.checkBoxNouveauLieu.Location = new System.Drawing.Point(27, 411);
+            this.checkBoxNouveauLieu.Name = "checkBoxNouveauLieu";
+            this.checkBoxNouveauLieu.Size = new System.Drawing.Size(144, 17);
+            this.checkBoxNouveauLieu.TabIndex = 33;
+            this.checkBoxNouveauLieu.Text = "Ajouter un nouveau lieu :";
+            this.checkBoxNouveauLieu.UseVisualStyleBackColor = true;
+            this.checkBoxNouveauLieu.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // labelNomLieu
             // 
@@ -331,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 526);
+            this.ClientSize = new System.Drawing.Size(881, 536);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxMinuteFin);
             this.Controls.Add(this.comboBoxHeureFin);
@@ -342,7 +342,7 @@
             this.Controls.Add(this.labelLieuCoordonneeX);
             this.Controls.Add(this.comboBoxListeLieu);
             this.Controls.Add(this.labelNomLieu);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxNouveauLieu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxMinuteDebut);
             this.Controls.Add(this.comboBoxHeureDebut);
@@ -387,7 +387,7 @@
         private System.Windows.Forms.ComboBox comboBoxHeureDebut;
         private System.Windows.Forms.ComboBox comboBoxMinuteDebut;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxNouveauLieu;
         private System.Windows.Forms.Label labelNomLieu;
         private System.Windows.Forms.ComboBox comboBoxListeLieu;
         private System.Windows.Forms.Label labelLieuCoordonneeX;

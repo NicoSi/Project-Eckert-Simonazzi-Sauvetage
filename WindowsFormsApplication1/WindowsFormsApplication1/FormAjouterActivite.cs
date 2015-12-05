@@ -147,18 +147,113 @@ namespace WindowsFormsApplication1
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
         {
-            //recuperation nom activite
-            string nomActivite = textBoxNomActivite.Text;
 
-            //recuperation type activite
-            string typeActivite = treeViewTypeActivite.SelectedNode.Parent.Text + " - " +  treeViewTypeActivite.SelectedNode.Text;
+            string messageErreur= "Veuillez remplir les champs suivants :";
+            string messageErreurSupplementaire = "Erreurs : ";
+            bool erreur = false;
+            bool erreurSupplementaire = false;
+            string nomActivite = "";
+            string typeActivite = "";
+            int horaireDebutActivite = 0; 
+            int horaireFinActivite = 0;
+            Lieu lieuActivite = new Lieu("lieu non defini", 0,0);
+            
+            if (textBoxNomActivite.Text != "")
+            {
+                //recuperation nom activite
+                nomActivite = textBoxNomActivite.Text;
+            }
+            else
+            {
+                erreur = true;
+                messageErreur = messageErreur + "\r\n - Nom activité";
+            }
+            
+            if (treeViewTypeActivite.SelectedNode != null)
+            {
+                //recuperation type activite
+                typeActivite = treeViewTypeActivite.SelectedNode.Parent.Text + " - " + treeViewTypeActivite.SelectedNode.Text;
+            }
+            else
+            {
+                erreur = true;
+                messageErreur = messageErreur + "\r\n - Type d'activité";
+            }
+
 
             //recuperation horaire debut et horaire fin
-            int horaireDebutActivite = int.Parse(comboBoxHeureDebut.Text) * 60 + int.Parse(comboBoxMinuteDebut.Text) ;
-            int horaireFinActivite = int.Parse(comboBoxHeureFin.Text) * 60 + int.Parse(comboBoxMinuteFin.Text) ;
+            if(comboBoxHeureDebut.Text == "" || comboBoxMinuteDebut.Text == "" || comboBoxHeureFin.Text == "" || comboBoxMinuteFin.Text == "" )
+            {
+                erreur = true;
+                messageErreur = messageErreur + "\r\n - Horaire de début et de fin";
+                
+            }
+            else
+            {
+                horaireDebutActivite = int.Parse(comboBoxHeureDebut.Text) * 60 + int.Parse(comboBoxMinuteDebut.Text);
+                horaireFinActivite = int.Parse(comboBoxHeureFin.Text) * 60 + int.Parse(comboBoxMinuteFin.Text);
+
+                if (horaireDebutActivite >= horaireFinActivite)
+                {
+                    erreurSupplementaire = true;
+                    messageErreurSupplementaire = "\r\n - Les horaires de fin doivent être supérieures aux horaires de début";
+                }
+
+            }
+
+            //Creation d'un lieu
+            string nomLieu = "";
+            int coordonneX = 0;
+            int coordonneY = 0;
 
             //recuperation lieu
-            Lieu lieuActivite = listeLieu[comboBoxListeLieu.SelectedIndex];
+            if (comboBoxListeLieu.Text != "" && checkBoxNouveauLieu.Checked == false)
+            {
+                    lieuActivite = listeLieu[comboBoxListeLieu.SelectedIndex];
+            }
+            else if (comboBoxListeLieu.Text == "" && checkBoxNouveauLieu.Checked == false)
+            {
+                   erreur = true;
+                   messageErreur = messageErreur + "\r\n - Lieu";
+            }
+            else if (checkBoxNouveauLieu.Checked == true)
+            {
+                if (textBoxNomLieu.Text != "")
+                {
+                    nomLieu = textBoxNomLieu.Text;
+                }
+                else {
+                    erreur = true;
+                    messageErreur = messageErreur + "\r\n - Nom du lieu";
+                }
+
+                if (textBoxCoordonnéesX.Text != "")
+                {
+                    coordonneX = int.Parse(textBoxCoordonnéesX.Text);
+                }
+                else {
+                    erreur = true;
+                    messageErreur = messageErreur + "\r\n - Coordonnée X";
+                }
+
+                if (textBoxCoordonnéesY.Text != "")
+                {
+                    coordonneY = int.Parse(textBoxCoordonnéesY.Text);
+                }
+                else
+                {
+                    erreur = true;
+                    messageErreur = messageErreur + "\r\n - Coordonnée Y";
+                }
+
+                if (nomLieu != "" && textBoxCoordonnéesX.Text != "" && textBoxCoordonnéesY.Text != "")
+                {
+                    lieuActivite = new Lieu(nomLieu, coordonneX, coordonneY);
+                    listeLieu.Add(lieuActivite);
+                }
+
+            }
+
             List<Astronautes> listeAstronautesSelection = new List<Astronautes>();
 
             //recuperation de la liste d'astronautes selectionnee
@@ -170,13 +265,27 @@ namespace WindowsFormsApplication1
                     }
             }
 
+
             string texteDescriptif = richTextBox1.Text;
 
-            Activités nouvelleActivite = new Activités(nomActivite, typeActivite, horaireDebutActivite, horaireFinActivite, lieuActivite, listeAstronautesSelection, texteDescriptif);
+            if(erreur == false && erreurSupplementaire == false)
+            {
+                Activités nouvelleActivite = new Activités(nomActivite, typeActivite, horaireDebutActivite, horaireFinActivite, lieuActivite, listeAstronautesSelection, texteDescriptif);
+                jourActuel.ajouterActivite(nouvelleActivite);
+                this.Dispose();
 
-            jourActuel.ajouterActivite(nouvelleActivite);
+            }
+            else if (erreur == true)
+            {
+                MessageBox.Show(messageErreur, "Message Erreur", MessageBoxButtons.OK);
+            }
+            else if (erreurSupplementaire == true)
+            {
+                MessageBox.Show(messageErreurSupplementaire, "Message Erreur", MessageBoxButtons.OK);
+            }
 
-            this.Dispose();
+
+            
         }
 
         private void treeViewTypeActivite_AfterSelect(object sender, TreeViewEventArgs e)
@@ -207,7 +316,7 @@ namespace WindowsFormsApplication1
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            if (checkBoxNouveauLieu.Checked == true)
             {
                 labelNomLieu.Visible = true;
                 labelLieuCoordonneeX.Visible = true;
