@@ -25,12 +25,12 @@ public class Jour
     {
 
     }
-    public Jour(List<Activités> tempListeActivite, Planning tempPlanningJour)
+    public Jour(List<Activités> tempListeActivite, string tempCompteRendu)
     {
         nbJour++;
         listeActivite = tempListeActivite;
-        PlanningJour = tempPlanningJour;
         idJour = nbJour;
+        compteRendu = tempCompteRendu;
     }
     public Jour(List<Activités> tempListeActivite)
     {

@@ -78,7 +78,8 @@ namespace WindowsFormsApplication1
             remplissageListBox();
 
             DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
-           
+
+            richTextBoxCompteRendu.Text = objetJourSelection.GetcompteRendu;
 
             labelNumeroJour.Text = jourSelection.ToString();
 

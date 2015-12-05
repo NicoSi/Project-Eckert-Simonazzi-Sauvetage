@@ -169,7 +169,7 @@ namespace WindowsFormsApplication1
 
             listeActiviteParDefaut.Add(exploration);
 
-            Activités Test = new Activités("Toto", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
+            Activités Test = new Activités("Toto", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Pouet");
             Activités Test2 = new Activités("Tata", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
 
             List<Activités> listeActiviteRecherche = new List<Activités>();
@@ -183,20 +183,20 @@ namespace WindowsFormsApplication1
             {
 
 
-                if (i == 50 || i == 256 || i == 147 || i == 200 || i == 60 || i == 10 || i == 320 || i == 457 || i == 159 || i == 328 )
+                if (i == 50 || i == 256 || i == 147 || i == 200 || i == 60 || i == 10 || i == 320 || i == 457 || i == 159 || i == 328 || i == 12 || i ==97 || i ==358 || i == 45 || i == 123 || i ==412) 
                 {
-                    Jour j = new Jour(listeActiviteRecherche);
+                    Jour j = new Jour(listeActiviteRecherche, "Test 1");
                     listeJourForm1.Add(j);
                 }else if (i == 51 || i == 143 || i == 98 || i == 254)
                 {
-                    Jour j = new Jour(listeActiviteRecherche2);
+                    Jour j = new Jour(listeActiviteRecherche2, "Test 2");
                     listeJourForm1.Add(j);
 
                 }
                 else
                 {
 
-                    Jour j = new Jour(listeActiviteParDefaut);
+                    Jour j = new Jour(listeActiviteParDefaut, "Test 0");
                     listeJourForm1.Add(j);
                 
                 }
@@ -506,11 +506,20 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            modeRecherche = false;
+            boutonVisible();
+            afficherJour(0);
+            buttonAnnuler.Visible = false;
+            labelResultatRecherche.Visible = false;
+        }
 
+        // Recherche d'un terme dans le nom d'activite, texte descriptif ou compte rendu
         private void buttonRecherche_Click(object sender, EventArgs e)
         {
             string termeARechercher = textBoxRecherche.Text;
-            int termePresent;
+            int termePresentNom, termePresentTexteDescriptif, termePresentCompteRendu;
             int nombreDeJour = 0;
             bool termePresentDansJour = false;
             modeRecherche = true;
@@ -522,10 +531,18 @@ namespace WindowsFormsApplication1
             foreach (Jour J in listeJourForm1)
             {
 
+                termePresentCompteRendu = J.GetcompteRendu.IndexOf(termeARechercher);
+
+                if (termePresentCompteRendu != -1)
+                {
+                    termePresentDansJour = true;
+                }
+
                 foreach (Activités A in J.getlisteActivite)
                 {
-                    termePresent = A.GetnomActivite.IndexOf(termeARechercher);
-                    if (termePresent != -1)
+                    termePresentNom = A.GetnomActivite.IndexOf(termeARechercher);
+                    termePresentTexteDescriptif = A.GettexteDescriptif.IndexOf(termeARechercher);
+                    if (termePresentNom != -1 || termePresentTexteDescriptif != -1)
                     {
                         termePresentDansJour = true;
                     }
@@ -544,14 +561,13 @@ namespace WindowsFormsApplication1
                 afficherJour(0);
                 labelResultatRecherche.Text = "Nombre de jour correspondant au résultat de la recherche : " + nombreDeJour.ToString();
                 labelResultatRecherche.Visible = true;
+                buttonAnnuler.Visible = true;
             }
             else
             {
                 MessageBox.Show("Votre recherche n'a donné aucun resultat", "Resultat recherche", MessageBoxButtons.OK);
                 modeRecherche = false;
                 afficherJour(0);
-                labelResultatRecherche.Text = "La recherche n'a donné aucun résultat";
-                labelResultatRecherche.Visible = true;
             }
         }
 
@@ -1149,6 +1165,8 @@ namespace WindowsFormsApplication1
 
             xmlDoc.Save("FichierXMLPrincipal.xml");
         }
+
+    
 
       
         /*public bool ChargerFichierXMLPrincipal() //Permet de recréer toutes les instances appartenant au form 1
