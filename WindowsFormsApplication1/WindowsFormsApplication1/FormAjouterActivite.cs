@@ -428,6 +428,12 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void buttonAjouterParCarte_Click(object sender, EventArgs e)
+        {
+            nouveauLieuCarte fom = new nouveauLieuCarte();
+
+        }
+
 
 
     }

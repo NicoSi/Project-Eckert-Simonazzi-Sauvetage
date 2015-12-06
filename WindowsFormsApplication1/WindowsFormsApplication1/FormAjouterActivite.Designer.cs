@@ -56,6 +56,7 @@
             this.comboBoxHeureFin = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxMinuteFin = new System.Windows.Forms.ComboBox();
+            this.buttonAjouterParCarte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitre
@@ -327,11 +328,22 @@
             this.comboBoxMinuteFin.Size = new System.Drawing.Size(72, 21);
             this.comboBoxMinuteFin.TabIndex = 42;
             // 
+            // buttonAjouterParCarte
+            // 
+            this.buttonAjouterParCarte.Location = new System.Drawing.Point(275, 442);
+            this.buttonAjouterParCarte.Name = "buttonAjouterParCarte";
+            this.buttonAjouterParCarte.Size = new System.Drawing.Size(144, 23);
+            this.buttonAjouterParCarte.TabIndex = 44;
+            this.buttonAjouterParCarte.Text = "Ajouter par carte";
+            this.buttonAjouterParCarte.UseVisualStyleBackColor = true;
+            this.buttonAjouterParCarte.Click += new System.EventHandler(this.buttonAjouterParCarte_Click);
+            // 
             // FormAjouterActivite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 536);
+            this.Controls.Add(this.buttonAjouterParCarte);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxMinuteFin);
             this.Controls.Add(this.comboBoxHeureFin);
@@ -398,5 +410,6 @@
         private System.Windows.Forms.ComboBox comboBoxHeureFin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxMinuteFin;
+        private System.Windows.Forms.Button buttonAjouterParCarte;
     }
 }
