@@ -457,7 +457,7 @@
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(1284, 532);
+            this.ClientSize = new System.Drawing.Size(1276, 532);
             this.Controls.Add(this.labelResultat);
             this.Controls.Add(this.labelNombreJour);
             this.Controls.Add(this.buttonAnnuler);
@@ -471,6 +471,7 @@
             this.Controls.Add(this.suivant);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
