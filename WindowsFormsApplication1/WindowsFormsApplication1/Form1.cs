@@ -112,6 +112,8 @@ namespace WindowsFormsApplication1
 
             Lieu stationMars = new Lieu("base principale", 0, 0);
             Lieu lieuExploration1 = new Lieu("cratere 1 ", 50, 50);
+            Lieu lieuExploration2 = new Lieu("cratere 2", 100, 100);
+            Lieu lieuExploration3 = new Lieu("cratere 2", 150, 150);
 
 
             listeDeLieux.Add(stationMars);
@@ -169,8 +171,9 @@ namespace WindowsFormsApplication1
 
             listeActiviteParDefaut.Add(exploration);
 
-            Activités Test = new Activités("Toto", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Pouet");
-            Activités Test2 = new Activités("Tata", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
+            Activités Test = new Activités("Toto", "Exploration - Space Suit", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Pouet");
+            Activités Test2 = new Activités("Tata", "Exploration - Vehicle", 1000, 1200, lieuExploration2, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
+            Activités Test3 = new Activités("Toto", "Exploration - Space Suit", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Pouet");
 
             List<Activités> listeActiviteRecherche = new List<Activités>();
             List<Activités> listeActiviteRecherche2 = new List<Activités>();
@@ -187,7 +190,7 @@ namespace WindowsFormsApplication1
                 {
                     Jour j = new Jour(listeActiviteRecherche, "Test 1");
                     listeJourForm1.Add(j);
-                }else if (i == 51 || i == 143 || i == 98 || i == 254)
+                }else if (i== 4 || i == 51 || i == 143 || i == 98 || i == 254)
                 {
                     Jour j = new Jour(listeActiviteRecherche2, "Test 2");
                     listeJourForm1.Add(j);
@@ -1164,6 +1167,16 @@ namespace WindowsFormsApplication1
             ////////////\Lieu/////////
 
             xmlDoc.Save("FichierXMLPrincipal.xml");
+        }
+
+        private void enregistrerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
 
     

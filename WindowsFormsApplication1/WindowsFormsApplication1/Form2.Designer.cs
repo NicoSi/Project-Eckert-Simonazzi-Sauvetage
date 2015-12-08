@@ -43,6 +43,7 @@
             this.buttonModifierActivité = new System.Windows.Forms.Button();
             this.buttonAjouterActivité = new System.Windows.Forms.Button();
             this.panelListeActivité = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.boutonEffacerActivite = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.labelNumeroJour = new System.Windows.Forms.Label();
@@ -50,9 +51,8 @@
             this.boutonJourSuivant = new System.Windows.Forms.Button();
             this.boutonJourPrecedent = new System.Windows.Forms.Button();
             this.panelCompteRendu = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelCompteRendu = new System.Windows.Forms.Label();
             this.richTextBoxCompteRendu = new System.Windows.Forms.RichTextBox();
+            this.labelCompteRendu = new System.Windows.Forms.Label();
             this.panelInteractionActivité.SuspendLayout();
             this.panelListeActivité.SuspendLayout();
             this.panelCompteRendu.SuspendLayout();
@@ -146,6 +146,8 @@
             this.buttonAfficherLieuActivité.TabIndex = 4;
             this.buttonAfficherLieuActivité.Text = "Afficher le lieu";
             this.buttonAfficherLieuActivité.UseVisualStyleBackColor = true;
+            this.buttonAfficherLieuActivité.Visible = false;
+            this.buttonAfficherLieuActivité.Click += new System.EventHandler(this.buttonAfficherLieuActivité_Click);
             // 
             // labelPlageHoraireActivité
             // 
@@ -219,6 +221,16 @@
             this.panelListeActivité.Size = new System.Drawing.Size(382, 416);
             this.panelListeActivité.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Liste d\'activités :";
+            // 
             // boutonEffacerActivite
             // 
             this.boutonEffacerActivite.Location = new System.Drawing.Point(29, 365);
@@ -290,15 +302,14 @@
             this.panelCompteRendu.Size = new System.Drawing.Size(267, 416);
             this.panelCompteRendu.TabIndex = 9;
             // 
-            // label2
+            // richTextBoxCompteRendu
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Liste d\'activités :";
+            this.richTextBoxCompteRendu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxCompteRendu.Location = new System.Drawing.Point(27, 38);
+            this.richTextBoxCompteRendu.Name = "richTextBoxCompteRendu";
+            this.richTextBoxCompteRendu.Size = new System.Drawing.Size(220, 335);
+            this.richTextBoxCompteRendu.TabIndex = 11;
+            this.richTextBoxCompteRendu.Text = "";
             // 
             // labelCompteRendu
             // 
@@ -309,15 +320,6 @@
             this.labelCompteRendu.Size = new System.Drawing.Size(180, 20);
             this.labelCompteRendu.TabIndex = 10;
             this.labelCompteRendu.Text = "Compte rendu  du jour:";
-            // 
-            // richTextBoxCompteRendu
-            // 
-            this.richTextBoxCompteRendu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxCompteRendu.Location = new System.Drawing.Point(27, 38);
-            this.richTextBoxCompteRendu.Name = "richTextBoxCompteRendu";
-            this.richTextBoxCompteRendu.Size = new System.Drawing.Size(220, 335);
-            this.richTextBoxCompteRendu.TabIndex = 11;
-            this.richTextBoxCompteRendu.Text = "";
             // 
             // Form2
             // 

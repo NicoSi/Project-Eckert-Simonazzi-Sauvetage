@@ -84,7 +84,8 @@ namespace WindowsFormsApplication1
             labelNumeroJour.Text = jourSelection.ToString();
 
             listBox1.SelectedIndex = 0;
-     
+
+                
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -114,6 +115,17 @@ namespace WindowsFormsApplication1
             activiteSelectionne = listBox1.SelectedIndex;
             labelNomActivite.Text = listeActivitéTableau[activiteSelectionne].GetNomActivité;
             labelTypeActivité.Text = "Type : " + listeActivitéTableau[activiteSelectionne].GettypeActivite;
+            //Affichage du bouton lieu seulement s'il s'agit d'une exploration
+            if (listeActivitéTableau[activiteSelectionne].GettypeActivite.IndexOf("Exploration") != -1)
+            {
+                buttonAfficherLieuActivité.Visible = true;
+            }else
+            {
+                buttonAfficherLieuActivité.Visible = false;
+            }
+
+
+
             labelJourActivité.Text = "Jour : "  + jourSelection.ToString();
 
             DateTime dateDebutPlanning = planning.GetDateDebut;
@@ -141,6 +153,10 @@ namespace WindowsFormsApplication1
             }
 
             texteDescriptifActivite.Text = listeActivitéTableau[activiteSelectionne].GettexteDescriptif;
+
+
+
+   
             
         }
 
@@ -207,6 +223,13 @@ namespace WindowsFormsApplication1
 
             remplissageListBox();
          
+        }
+
+        private void buttonAfficherLieuActivité_Click(object sender, EventArgs e)
+        {
+            FormAfficherLieu form = new FormAfficherLieu(listeLieu, listeJour, planning);
+            form.ShowDialog();
+
         } 
 
     }

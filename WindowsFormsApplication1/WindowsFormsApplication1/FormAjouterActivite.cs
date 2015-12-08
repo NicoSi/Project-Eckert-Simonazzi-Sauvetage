@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         private List<Lieu> listeLieu;
         private Jour jourActuel;
         private Planning planning;
+        private int positionX, positionY;
 
         public FormAjouterActivite(Jour tempJourActuel, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu, Planning tempPlanning)
         {
@@ -324,7 +325,7 @@ namespace WindowsFormsApplication1
                 textBoxNomLieu.Visible = true;
                 textBoxCoordonnéesX.Visible = true;
                 textBoxCoordonnéesY.Visible = true;
-
+                buttonAjouterParCarte.Visible = true;
 
             }
             else
@@ -335,7 +336,7 @@ namespace WindowsFormsApplication1
                 textBoxNomLieu.Visible = false;
                 textBoxCoordonnéesX.Visible = false;
                 textBoxCoordonnéesY.Visible = false;
-
+                buttonAjouterParCarte.Visible = false;
             }
 
         }
@@ -430,7 +431,20 @@ namespace WindowsFormsApplication1
 
         private void buttonAjouterParCarte_Click(object sender, EventArgs e)
         {
-            nouveauLieuCarte fom = new nouveauLieuCarte();
+            nouveauLieuCarte form = new nouveauLieuCarte();
+
+            if (form.ShowDialog(this) == DialogResult.OK && form.getNomLieu != "" && form.getPositionX.ToString() != "" && form.getPositionY.ToString() != "")
+            {
+
+                 textBoxNomLieu.Text = form.getNomLieu;
+                 textBoxCoordonnéesX.Text = form.getPositionX.ToString();
+                 textBoxCoordonnéesY.Text = form.getPositionY.ToString();
+
+            }
+            else if (form.ShowDialog(this) == DialogResult.OK || form.getNomLieu == "" || form.getPositionX.ToString() == "" || form.getPositionY.ToString() == "")
+            {
+                buttonAjouterParCarte_Click(sender, e);
+            }
 
         }
 

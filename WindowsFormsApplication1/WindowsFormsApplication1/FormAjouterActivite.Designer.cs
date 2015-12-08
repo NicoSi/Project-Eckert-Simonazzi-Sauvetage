@@ -336,6 +336,7 @@
             this.buttonAjouterParCarte.TabIndex = 44;
             this.buttonAjouterParCarte.Text = "Ajouter par carte";
             this.buttonAjouterParCarte.UseVisualStyleBackColor = true;
+            this.buttonAjouterParCarte.Visible = false;
             this.buttonAjouterParCarte.Click += new System.EventHandler(this.buttonAjouterParCarte_Click);
             // 
             // FormAjouterActivite

@@ -102,3 +102,5 @@ D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFor
 D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources
 D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
+D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.nouveauLieuCarte.resources
+D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAfficherLieu.resources
