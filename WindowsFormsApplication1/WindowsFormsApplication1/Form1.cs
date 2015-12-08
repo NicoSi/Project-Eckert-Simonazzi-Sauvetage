@@ -1032,7 +1032,7 @@ namespace WindowsFormsApplication1
 
 
             ////////////Activités//////////// Serialise les attributs de la classe Activités
-            XmlNode Activites = xmlDoc.CreateElement("SerializationActivites");
+            XmlNode Activites = xmlDoc.CreateElement("Activites");
             rootNode.AppendChild(Activites);
             foreach (Activités A in listeDesActivites)
             {
@@ -1103,17 +1103,16 @@ namespace WindowsFormsApplication1
 
 
             ////////////Planning////////////
-            XmlNode ClassePlanning = xmlDoc.CreateElement("SerializationPlanning");
+            XmlNode ClassePlanning = xmlDoc.CreateElement("Plannings");
             rootNode.AppendChild(ClassePlanning);
-
+            
+            ClassePlanning.AppendChild(ClassePlanning);
             XmlNode DateDeDebut = xmlDoc.CreateElement("Date de debut");
             DateDeDebut.InnerText = planning.GetDateDebut.ToString();
             ClassePlanning.AppendChild(DateDeDebut);
-
             XmlNode nomDuPlanning = xmlDoc.CreateElement("nom");
             nomDuPlanning.InnerText = planning.GetnomPlanning;
             ClassePlanning.AppendChild(nomDuPlanning);
-
             XmlNode idDuPlanning = xmlDoc.CreateElement("ID");
             idDuPlanning.InnerText = planning.GetidPlanning.ToString();
             ClassePlanning.AppendChild(nomDuPlanning);
@@ -1121,47 +1120,46 @@ namespace WindowsFormsApplication1
 
             ////////////Jour////////
 
-            XmlNode Jour = xmlDoc.CreateElement("SerializationJour");
+            XmlNode Jour = xmlDoc.CreateElement("Jours");
             rootNode.AppendChild(Jour);
 
             foreach (Jour j in listeJourForm1)
             {
+                XmlNode subJour = xmlDoc.CreateElement("Jour");
+                Jour.AppendChild(Jour);
                 XmlNode idDuJour = xmlDoc.CreateElement("ID");
                 idDuJour.InnerText = j.GetidJour.ToString();
-                Jour.AppendChild(idDuJour);
-
+                subJour.AppendChild(idDuJour);
                 XmlNode Etat = xmlDoc.CreateElement("Etat");
                 Etat.InnerText = j.GetetatActivite; ;
-                Jour.AppendChild(Etat);
-
+                subJour.AppendChild(Etat);
                 XmlNode CompteRendu = xmlDoc.CreateElement("Compte Rendu");
                 CompteRendu.InnerText = j.GetcompteRendu;
-                Jour.AppendChild(CompteRendu);
+                subJour.AppendChild(CompteRendu);
 
             }
             ////////////\Jour//////////
 
             ////////////Lieu//////////
-            XmlNode Lieu = xmlDoc.CreateElement("Lieu");
+            XmlNode Lieu = xmlDoc.CreateElement("lieux");
             rootNode.AppendChild(Lieu);
 
             foreach (Lieu L in listeDeLieux)
             {
+                XmlNode l = xmlDoc.CreateElement("Lieu");
+                l.AppendChild(Lieu);
                 XmlNode NomLieu = xmlDoc.CreateElement("Nom");
                 NomLieu.InnerText = L.GetnomLieu;
-                Lieu.AppendChild(NomLieu);
-
+                l.AppendChild(NomLieu);
                 XmlNode X = xmlDoc.CreateElement("Abscisse");
                 X.InnerText = L.GetCoordonneeX.ToString();
-                Lieu.AppendChild(X);
-
+                l.AppendChild(X);
                 XmlNode Y = xmlDoc.CreateElement("Ordonnee");
                 Y.InnerText = L.GetCoordonneeY.ToString();
-                Lieu.AppendChild(Y);
-
+                l.AppendChild(Y);
                 XmlNode idDuLieu = xmlDoc.CreateElement("ID");
                 idDuLieu.InnerText = L.GetidLieu.ToString();
-                Lieu.AppendChild(idDuLieu);
+                l.AppendChild(idDuLieu);
 
             }
             ////////////\Lieu/////////
@@ -1182,7 +1180,7 @@ namespace WindowsFormsApplication1
     
 
       
-        /*public bool ChargerFichierXMLPrincipal() //Permet de recréer toutes les instances appartenant au form 1
+        public bool ChargerFichierXMLPrincipal() //Permet de recréer toutes les instances appartenant au form 1
         {
             XmlDocument xmldoc = new XmlDocument();
             try
@@ -1206,51 +1204,37 @@ namespace WindowsFormsApplication1
             listeJourForm1.Clear();
 
             //Charge le planning
-            XmlNodeList noeuPlanning = xmldoc.GetElementsByTagName("ClassePlanning");
+            XmlNodeList noeuPlanning = xmldoc.GetElementsByTagName("Planning");
 
             foreach (XmlNode node in noeuPlanning)
             {
                 string nomDuPlanning = node.SelectSingleNode("nom").InnerText;
                 DateTime DateDeDebut = DateTime.Parse(node.SelectSingleNode("Date de debut").InnerText);
                 int idDuPlanning = int.Parse(node.SelectSingleNode("ID").InnerText);
-                Planning Planning = new Planning(nomDuPlanning, listeJourForm1, DateDeDebut);
+                Planning PlanningCharge = new Planning(nomDuPlanning, listeJourForm1, DateDeDebut);
             }
             // Charge les activites
 
-            XmlNodeList nodeListeActivites = xmldoc.GetElementsByTagName("SerializationActivites");
+            XmlNodeList nodeListeActivites = xmldoc.GetElementsByTagName("Activites");
             foreach (XmlNode nodeAct in nodeListeActivites)
             {
                 if (nodeAct != null)
                 {
-                    XmlNodeList nodeActivites = xmldoc.GetElementsByTagName("Activites");
+                    XmlNodeList nodeActivites = xmldoc.GetElementsByTagName("Activite");
 
                     foreach (XmlNode nodeRes in nodeActivites)
                     {
-                        DateTime hDebut = DateTime.Parse(nodeRes.SelectSingleNode("heuredebut").InnerText);
-                        DateTime hFin = DateTime.Parse(nodeRes.SelectSingleNode("heureFin").InnerText);
+                        int hDebut = int.Parse(nodeRes.SelectSingleNode("heuredebut").InnerText);
+                        int  hFin = int.Parse(nodeRes.SelectSingleNode("heureFin").InnerText);
                         string txtDescriptif = nodeRes.SelectSingleNode("texteDescriptif").InnerText;
                         string typeActivity = nodeRes.SelectSingleNode("typeActivite").InnerText;
                         string statutDeActivite = nodeRes.SelectSingleNode("statutActivite").InnerText;
                         string NomActivite = nodeRes.SelectSingleNode("nomActivité").InnerText;
                         string nomDuLieu = (nodeRes.SelectSingleNode("lieuActivite").InnerText);
+                        
 
-
-                        //Activités monActivite = new Activités(NomActivite,typeActivity,hDebut,hFin,lieu);
-
-                        // charge les Astronautes de activite
                         // charge les Astronaute de activite
-
-
-<<<<<<< HEAD
-
-                        //Activités monActivite = new Activités(NomActivite, typeActivity, hDebut, hFin, lieu);
-=======
-                       // Activités monActivite = new Activités(NomActivite, typeActivity, hDebut, hFin, lieu);
->>>>>>> origin/master
-
-                        // charge les Astronautes de activite
-                        // charge les Astronaute de activite
-
+                       
                         XmlNodeList nodeAstronautes = xmldoc.GetElementsByTagName("Cosmonautes");
                         foreach (XmlNode nodeCosmonaute in nodeAstronautes)
                         {
@@ -1258,44 +1242,20 @@ namespace WindowsFormsApplication1
                             string nomCosmonaute = nodeCosmonaute.SelectSingleNode("Nom").InnerText;
                             string prenomCosmonaute = nodeCosmonaute.SelectSingleNode("Prenom").InnerText;
                             int ageCosmonaute = int.Parse(nodeCosmonaute.SelectSingleNode("Age").InnerText);
-
+                            Astronautes monAstronaute = new Astronautes(nomCosmonaute,prenomCosmonaute,ageCosmonaute);
+                            listeDesAstronautes.Add(monAstronaute);
                         }
-                        /* XmlNode cosmonautes = xmlDoc.CreateElement("Astronaute");
-                     Activites.AppendChild(cosmonautes);
 
-                     XmlNode idCosmonaute = xmlDoc.CreateElement("ID");
-                     idCosmonaute.InnerText = Astro.GetidAstronaute.ToString();
-                     cosmonautes.AppendChild(idCosmonaute);
-
-                     XmlNode nomCosmonaute = xmlDoc.CreateElement("Nom");
-                     nomCosmonaute.InnerText = Astro.GetnomAstronaute;
-                     cosmonautes.AppendChild(nomCosmonaute);
-
-                     XmlNode prenomCosmonaute = xmlDoc.CreateElement("Prenom");
-                     prenomCosmonaute.InnerText = Astro.GetprenomAstronaute;
-                     cosmonautes.AppendChild(prenomCosmonaute);
-
-                     XmlNode ageCosmonaute = xmlDoc.CreateElement("Age");
-                     ageCosmonaute.InnerText = Astro.GetageAstronaute.ToString();
-                     cosmonautes.AppendChild(ageCosmonaute);
-
+                        Lieu L = listeDeLieux.Find(x => x.GetnomLieu == nomDuLieu);
+                        Activités monActivite = new Activités(NomActivite, typeActivity, hDebut, hFin, L, listeDesAstronautes, txtDescriptif);
+                        // On remplie la liste à charger 
+                        listeDesActivites.Add(monActivite);
                     }
                 }
             }
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
-            ////////FinJour///////
-
             //////////Lieu//////////
-            XmlNodeList nodeListeLieu = xmldoc.GetElementsByTagName("CategorieLieu");
+            XmlNodeList nodeListeLieu = xmldoc.GetElementsByTagName("Lieux");
             foreach (XmlNode nodeL in nodeListeLieu)
             {
                 if (nodeL != null)
@@ -1308,32 +1268,47 @@ namespace WindowsFormsApplication1
                         int X = int.Parse(leLieu.SelectSingleNode("Abscisse").InnerText);
                         int Y = int.Parse(leLieu.SelectSingleNode("Ordonnee").InnerText);
                         int idDuLieu = int.Parse(leLieu.SelectSingleNode("ID").InnerText);
-                        Lieu lieu = new Lieu(NomLieu, X, Y);
+                        Lieu monlieu = new Lieu(NomLieu, X, Y);
+                        listeDeLieux.Add(monlieu);
+
                     }
 
                     //////////FinLieu////////
-
-
                 }
 
-
-
             }
-            //////////////////
-            //////////////////
+            /////// Jour/////////
+            XmlNodeList nodeListeJour = xmldoc.GetElementsByTagName("Jours");
+
+            foreach (XmlNode nodeJ in nodeListeJour)
+            {
+                if (nodeJ != null)
+                {
+                    XmlNodeList nodeJourJ = xmldoc.GetElementsByTagName("Jour");
+
+                    foreach (XmlNode leJour in nodeJourJ)
+                    {
+                        string cptRendu = leJour.SelectSingleNode("Compte Rendu").InnerText;
+                        int idDuJour = int.Parse(leJour.SelectSingleNode("ID").InnerText);
+                        string etat = leJour.SelectSingleNode("Etat").InnerText;
+                        Jour J = new Jour(listeDesActivites, cptRendu);
+                        listeJourForm1.Add(J);
+                    }
+                }
+            }
+            /////////FinJour/////////
+
             return true;
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string message = "Veuillez enregistrer les changements avant de quitter.";
+            MessageBox.Show(message, "Sauvegarde", MessageBoxButtons.OKCancel);
+           
 
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
-
-        }*/
-
+        }
+        }
     }
-}
+
 
