@@ -55,6 +55,17 @@ public class Astronautes
         
     }
 	//FinAccesseurs
+    public override bool Equals(object obj)
+    {
+        Astronautes a = obj as Astronautes;
+
+        if (a != null)
+            if (this.nomAstronaute.Equals(a.nomAstronaute))
+                if (this.prenomAstronaute.Equals(a.prenomAstronaute))
+                    return true;
+        return false;
+    } 
+
 
 }
 

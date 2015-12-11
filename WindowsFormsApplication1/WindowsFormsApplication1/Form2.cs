@@ -167,7 +167,7 @@ namespace WindowsFormsApplication1
 
                 Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes, listeLieu);
 
-                Form.ActiveForm.Close();
+                //Form.ActiveForm.Close();
                 fenetre.Show();
             }
         }

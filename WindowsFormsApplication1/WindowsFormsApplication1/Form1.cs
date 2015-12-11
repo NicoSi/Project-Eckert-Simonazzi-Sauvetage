@@ -38,6 +38,8 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+
+            ChargerFichierXMLPrincipal();
         }
 
         //Accesseurs//
@@ -110,7 +112,7 @@ namespace WindowsFormsApplication1
         private void Form1_Load_1(object sender, EventArgs e)
         {
 
-            Lieu stationMars = new Lieu("base principale", 0, 0);
+          /*  Lieu stationMars = new Lieu("base principale", 0, 0);
             Lieu lieuExploration1 = new Lieu("cratere 1 ", 50, 50);
             Lieu lieuExploration2 = new Lieu("cratere 2", 100, 100);
             Lieu lieuExploration3 = new Lieu("cratere 2", 150, 150);
@@ -174,10 +176,10 @@ namespace WindowsFormsApplication1
             Activités Test = new Activités("Toto", "Exploration - Space Suit", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Pouet");
             Activités Test2 = new Activités("Tata", "Exploration - Vehicle", 1000, 1200, lieuExploration2, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
             Activités Test3 = new Activités("Toto", "Exploration - Space Suit", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Pouet");
-
+            
             List<Activités> listeActiviteRecherche = new List<Activités>();
             List<Activités> listeActiviteRecherche2 = new List<Activités>();
-
+            
             listeActiviteRecherche.Add(Test);
             listeActiviteRecherche2.Add(Test2);
 
@@ -205,19 +207,19 @@ namespace WindowsFormsApplication1
                 }
 
             }
-
+            */
 
             //Initialisation du planning
-            DateTime dateDebut = new DateTime(2015, 11, 15, 0, 0, 0);
+            //DateTime dateDebut = new DateTime(2015, 11, 15, 0, 0, 0);
 
             List<Jour> listeJourPlanning = new List<Jour>();
             listeJourPlanning = listeJourForm1;
-            planning = new Planning("Planning de Mars", listeJourPlanning, dateDebut);
+           // planning = new Planning("Planning de Mars", listeJourPlanning, dateDebut);
 
             jourPivot = 0;
 
             jourActuel = planning.getJourActuel();
-
+            
 
             //Affiche les jours colorés selon leur temporalité
 
@@ -1031,91 +1033,22 @@ namespace WindowsFormsApplication1
             xmlDoc.AppendChild(rootNode);
 
 
-            ////////////Activités//////////// Serialise les attributs de la classe Activités
-            XmlNode Activites = xmlDoc.CreateElement("Activites");
-            rootNode.AppendChild(Activites);
-            foreach (Activités A in listeDesActivites)
-            {
-                XmlNode Activite = xmlDoc.CreateElement("Activite");
-                Activites.AppendChild(Activite);
-
-                XmlNode hDebut = xmlDoc.CreateElement("heureDebut");
-                hDebut.InnerText = A.getHoraireDebut.ToString();
-                Activites.AppendChild(hDebut);
-
-                XmlNode hFin = xmlDoc.CreateElement("heureFin");
-
-
-                hFin.InnerText = A.GetHoraireFin.ToString();
-                Activites.AppendChild(hFin);
-
-                XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif");
-                txtDescriptif.InnerText = A.GettexteDescriptif;
-                Activites.AppendChild(txtDescriptif);
-
-                XmlNode typeActivity = xmlDoc.CreateElement("typeActivite");
-                typeActivity.InnerText = A.GettypeActivite;
-                Activites.AppendChild(typeActivity);
-
-                XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite");
-                statutDeActivite.InnerText = A.GetstatutActivite;
-                Activites.AppendChild(statutDeActivite);
-
-                XmlNode NomActivite = xmlDoc.CreateElement("nomActivité");
-                NomActivite.InnerText = A.GetnomActivite;
-                Activites.AppendChild(NomActivite);
-
-                XmlNode Astronautes = xmlDoc.CreateElement("Astronautes");
-                Activites.AppendChild(Astronautes);
-
-                XmlNode nomDuLieu = xmlDoc.CreateElement("lieu");
-                Activites.AppendChild(nomDuLieu);
-
-
-
-                //////Liste des Atsronautes de la classe Activités////////
-                foreach (Astronautes Astro in listeDesAstronautes)
-                {
-                    XmlNode cosmonautes = xmlDoc.CreateElement("Astronaute");
-                    Activites.AppendChild(cosmonautes);
-
-                    XmlNode idCosmonaute = xmlDoc.CreateElement("ID");
-                    idCosmonaute.InnerText = Astro.GetidAstronaute.ToString();
-                    cosmonautes.AppendChild(idCosmonaute);
-
-                    XmlNode nomCosmonaute = xmlDoc.CreateElement("Nom");
-                    nomCosmonaute.InnerText = Astro.GetnomAstronaute;
-                    cosmonautes.AppendChild(nomCosmonaute);
-
-                    XmlNode prenomCosmonaute = xmlDoc.CreateElement("Prenom");
-                    prenomCosmonaute.InnerText = Astro.GetprenomAstronaute;
-                    cosmonautes.AppendChild(prenomCosmonaute);
-
-                    XmlNode ageCosmonaute = xmlDoc.CreateElement("Age");
-                    ageCosmonaute.InnerText = Astro.GetageAstronaute.ToString();
-                    cosmonautes.AppendChild(ageCosmonaute);
-
-                }
-            }
-
-            //////\Liste des Atsronautes de la classe Activités////////
-            ////////////\Activites///////////
-
 
             ////////////Planning////////////
             XmlNode ClassePlanning = xmlDoc.CreateElement("Plannings");
             rootNode.AppendChild(ClassePlanning);
-            
-            ClassePlanning.AppendChild(ClassePlanning);
-            XmlNode DateDeDebut = xmlDoc.CreateElement("Date de debut");
+
+            XmlNode DateDeDebut = xmlDoc.CreateElement("DateDebut");
             DateDeDebut.InnerText = planning.GetDateDebut.ToString();
             ClassePlanning.AppendChild(DateDeDebut);
+
             XmlNode nomDuPlanning = xmlDoc.CreateElement("nom");
             nomDuPlanning.InnerText = planning.GetnomPlanning;
             ClassePlanning.AppendChild(nomDuPlanning);
+
             XmlNode idDuPlanning = xmlDoc.CreateElement("ID");
             idDuPlanning.InnerText = planning.GetidPlanning.ToString();
-            ClassePlanning.AppendChild(nomDuPlanning);
+            ClassePlanning.AppendChild(idDuPlanning);
             ////////////\Planning///////////
 
             ////////////Jour////////
@@ -1126,51 +1059,109 @@ namespace WindowsFormsApplication1
             foreach (Jour j in listeJourForm1)
             {
                 XmlNode subJour = xmlDoc.CreateElement("Jour");
-                Jour.AppendChild(Jour);
+                Jour.AppendChild(subJour);
                 XmlNode idDuJour = xmlDoc.CreateElement("ID");
                 idDuJour.InnerText = j.GetidJour.ToString();
                 subJour.AppendChild(idDuJour);
                 XmlNode Etat = xmlDoc.CreateElement("Etat");
                 Etat.InnerText = j.GetetatActivite; ;
                 subJour.AppendChild(Etat);
-                XmlNode CompteRendu = xmlDoc.CreateElement("Compte Rendu");
+                XmlNode CompteRendu = xmlDoc.CreateElement("CompteRendu");
                 CompteRendu.InnerText = j.GetcompteRendu;
                 subJour.AppendChild(CompteRendu);
 
+                XmlNode Activites = xmlDoc.CreateElement("Activites");
+                subJour.AppendChild(Activites);
+
+                foreach (Activités A in j.getlisteActivite)
+                {
+                    XmlNode Activite = xmlDoc.CreateElement("Activite");
+                    Activites.AppendChild(Activite);
+
+                    XmlNode hDebut = xmlDoc.CreateElement("heureDebut");
+                    hDebut.InnerText = A.getHoraireDebut.ToString();
+                    Activite.AppendChild(hDebut);
+
+                    XmlNode hFin = xmlDoc.CreateElement("heureFin");
+                    hFin.InnerText = A.GetHoraireFin.ToString();
+                    Activite.AppendChild(hFin);
+
+                    XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif");
+                    txtDescriptif.InnerText = A.GettexteDescriptif;
+                    Activite.AppendChild(txtDescriptif);
+
+                    XmlNode typeActivity = xmlDoc.CreateElement("typeActivite");
+                    typeActivity.InnerText = A.GettypeActivite;
+                    Activite.AppendChild(typeActivity);
+
+                    XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite");
+                    statutDeActivite.InnerText = A.GetstatutActivite;
+                    Activite.AppendChild(statutDeActivite);
+
+                    XmlNode NomActivite = xmlDoc.CreateElement("nomActivité");
+                    NomActivite.InnerText = A.GetnomActivite;
+                    Activite.AppendChild(NomActivite);
+
+                    XmlNode Astronautes = xmlDoc.CreateElement("Astronautes");
+                    Activite.AppendChild(Astronautes);
+
+                    XmlNode nomDuLieu = xmlDoc.CreateElement("lieu");
+                    Activite.AppendChild(nomDuLieu);
+
+
+
+                    //////Liste des Atsronautes de la classe Activités////////
+                    foreach (Astronautes Astro in A.GetlisteAstronautes)
+                    {
+                        XmlNode cosmonautes = xmlDoc.CreateElement("Astronaute");
+                        Astronautes.AppendChild(cosmonautes);
+
+                        XmlNode idCosmonaute = xmlDoc.CreateElement("ID");
+                        idCosmonaute.InnerText = Astro.GetidAstronaute.ToString();
+                        cosmonautes.AppendChild(idCosmonaute);
+
+                        XmlNode nomCosmonaute = xmlDoc.CreateElement("Nom");
+                        nomCosmonaute.InnerText = Astro.GetnomAstronaute;
+                        cosmonautes.AppendChild(nomCosmonaute);
+
+                        XmlNode prenomCosmonaute = xmlDoc.CreateElement("Prenom");
+                        prenomCosmonaute.InnerText = Astro.GetprenomAstronaute;
+                        cosmonautes.AppendChild(prenomCosmonaute);
+
+                        XmlNode ageCosmonaute = xmlDoc.CreateElement("Age");
+                        ageCosmonaute.InnerText = Astro.GetageAstronaute.ToString();
+                        cosmonautes.AppendChild(ageCosmonaute);
+
+                    }
+
+                        
+                    XmlNode l = xmlDoc.CreateElement("Lieu");
+                    Activite.AppendChild(l);
+    
+                    XmlNode NomLieu = xmlDoc.CreateElement("Nom");
+                    NomLieu.InnerText = A.GetLieuActivite.GetnomLieu;
+                    l.AppendChild(NomLieu);
+
+                    XmlNode X = xmlDoc.CreateElement("Abscisse");
+                    X.InnerText = A.GetLieuActivite.GetCoordonneeX.ToString();
+                    l.AppendChild(X);
+
+                    XmlNode Y = xmlDoc.CreateElement("Ordonnee");
+                    Y.InnerText = A.GetLieuActivite.GetCoordonneeY.ToString();
+                    l.AppendChild(Y);
+
+                    XmlNode idDuLieu = xmlDoc.CreateElement("ID");
+                    idDuLieu.InnerText = A.GetLieuActivite.GetidLieu.ToString();
+                    l.AppendChild(idDuLieu);
+
+                }
+
             }
-            ////////////\Jour//////////
-
-            ////////////Lieu//////////
-            XmlNode Lieu = xmlDoc.CreateElement("lieux");
-            rootNode.AppendChild(Lieu);
-
-            foreach (Lieu L in listeDeLieux)
-            {
-                XmlNode l = xmlDoc.CreateElement("Lieu");
-                l.AppendChild(Lieu);
-                XmlNode NomLieu = xmlDoc.CreateElement("Nom");
-                NomLieu.InnerText = L.GetnomLieu;
-                l.AppendChild(NomLieu);
-                XmlNode X = xmlDoc.CreateElement("Abscisse");
-                X.InnerText = L.GetCoordonneeX.ToString();
-                l.AppendChild(X);
-                XmlNode Y = xmlDoc.CreateElement("Ordonnee");
-                Y.InnerText = L.GetCoordonneeY.ToString();
-                l.AppendChild(Y);
-                XmlNode idDuLieu = xmlDoc.CreateElement("ID");
-                idDuLieu.InnerText = L.GetidLieu.ToString();
-                l.AppendChild(idDuLieu);
-
-            }
-            ////////////\Lieu/////////
-
+          
             xmlDoc.Save("FichierXMLPrincipal.xml");
         }
 
-        private void enregistrerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -1203,112 +1194,74 @@ namespace WindowsFormsApplication1
             listeDesAstronautes.Clear();
             listeJourForm1.Clear();
 
-            //Charge le planning
-            XmlNodeList noeuPlanning = xmldoc.GetElementsByTagName("Planning");
+            XmlNode planningNode = xmldoc.SelectSingleNode("Enregistrement").SelectSingleNode("Plannings");
+            DateTime dateDebut = DateTime.Parse(planningNode.SelectSingleNode("DateDebut").InnerText);
+            string nom = planningNode.SelectSingleNode("nom").InnerText;
+            int id = int.Parse(planningNode.SelectSingleNode("ID").InnerText);
+            List<Jour> listJours = new List<Jour>();
 
-            foreach (XmlNode node in noeuPlanning)
+            XmlNodeList jourNode = xmldoc.GetElementsByTagName("Jour");
+ 
+            foreach (XmlNode jour in jourNode)
             {
-                string nomDuPlanning = node.SelectSingleNode("nom").InnerText;
-                DateTime DateDeDebut = DateTime.Parse(node.SelectSingleNode("Date de debut").InnerText);
-                int idDuPlanning = int.Parse(node.SelectSingleNode("ID").InnerText);
-                Planning PlanningCharge = new Planning(nomDuPlanning, listeJourForm1, DateDeDebut);
-            }
-            // Charge les activites
+                string Etat = jour.SelectSingleNode("Etat").InnerText;
+                int idJour = int.Parse(jour.SelectSingleNode("ID").InnerText);
+                string compteRendu = jour.SelectSingleNode("CompteRendu").InnerText;
+                List<Activités> listActs = new List<Activités>();
 
-            XmlNodeList nodeListeActivites = xmldoc.GetElementsByTagName("Activites");
-            foreach (XmlNode nodeAct in nodeListeActivites)
-            {
-                if (nodeAct != null)
+                XmlNodeList activiteNode = jour.SelectSingleNode("Activites").SelectNodes("Activite");
+                foreach(XmlNode A in activiteNode)
                 {
-                    XmlNodeList nodeActivites = xmldoc.GetElementsByTagName("Activite");
+                    int hDebut = int.Parse(A.SelectSingleNode("heureDebut").InnerText);
+                    int hFin = int.Parse(A.SelectSingleNode("heureFin").InnerText);
+                    string txtDescriptif = A.SelectSingleNode("texteDescriptif").InnerText;
+                    string typeActivity =A.SelectSingleNode("typeActivite").InnerText;
+                    string statutDeActivite = A.SelectSingleNode("statutActivite").InnerText;
+                    string NomActivite = A.SelectSingleNode("nomActivité").InnerText;
+                    string nomDuLieu = (A.SelectSingleNode("Lieu").SelectSingleNode("Nom").InnerText);
+                    int abscisse = int.Parse(A.SelectSingleNode("Lieu").SelectSingleNode("Abscisse").InnerText);
+                    int ordonnee = int.Parse(A.SelectSingleNode("Lieu").SelectSingleNode("Ordonnee").InnerText);
+                    Lieu monLieu = new Lieu(nomDuLieu, abscisse, ordonnee);
 
-                    foreach (XmlNode nodeRes in nodeActivites)
+
+                    List<Astronautes> maListeAstronautes = new List<Astronautes>();
+                    XmlNodeList astroNode = A.SelectSingleNode("Astronautes").SelectNodes("Astronaute");
+                    foreach (XmlNode nodeCosmonaute in astroNode)
                     {
-                        int hDebut = int.Parse(nodeRes.SelectSingleNode("heuredebut").InnerText);
-                        int  hFin = int.Parse(nodeRes.SelectSingleNode("heureFin").InnerText);
-                        string txtDescriptif = nodeRes.SelectSingleNode("texteDescriptif").InnerText;
-                        string typeActivity = nodeRes.SelectSingleNode("typeActivite").InnerText;
-                        string statutDeActivite = nodeRes.SelectSingleNode("statutActivite").InnerText;
-                        string NomActivite = nodeRes.SelectSingleNode("nomActivité").InnerText;
-                        string nomDuLieu = (nodeRes.SelectSingleNode("lieuActivite").InnerText);
+                        int idCosmonaute = int.Parse(nodeCosmonaute.SelectSingleNode("ID").InnerText);
+                        string nomCosmonaute = nodeCosmonaute.SelectSingleNode("Nom").InnerText;
+                        string prenomCosmonaute = nodeCosmonaute.SelectSingleNode("Prenom").InnerText;
+                        int ageCosmonaute = int.Parse(nodeCosmonaute.SelectSingleNode("Age").InnerText);
+                        Astronautes monAstronaute = new Astronautes(nomCosmonaute, prenomCosmonaute, ageCosmonaute);
+                        
+                        maListeAstronautes.Add(monAstronaute);
+                        if (!listeDesAstronautes.Contains(monAstronaute))
+                            listeDesAstronautes.Add(monAstronaute);
                         
 
-                        // charge les Astronaute de activite
-                       
-                        XmlNodeList nodeAstronautes = xmldoc.GetElementsByTagName("Cosmonautes");
-                        foreach (XmlNode nodeCosmonaute in nodeAstronautes)
-                        {
-                            int idCosmonaute = int.Parse(nodeCosmonaute.SelectSingleNode("ID").InnerText);
-                            string nomCosmonaute = nodeCosmonaute.SelectSingleNode("Nom").InnerText;
-                            string prenomCosmonaute = nodeCosmonaute.SelectSingleNode("Prenom").InnerText;
-                            int ageCosmonaute = int.Parse(nodeCosmonaute.SelectSingleNode("Age").InnerText);
-                            Astronautes monAstronaute = new Astronautes(nomCosmonaute,prenomCosmonaute,ageCosmonaute);
-                            listeDesAstronautes.Add(monAstronaute);
-                        }
-
-                        Lieu L = listeDeLieux.Find(x => x.GetnomLieu == nomDuLieu);
-                        Activités monActivite = new Activités(NomActivite, typeActivity, hDebut, hFin, L, listeDesAstronautes, txtDescriptif);
-                        // On remplie la liste à charger 
-                        listeDesActivites.Add(monActivite);
                     }
-                }
-            }
+                    Activités monActivite = new Activités(NomActivite, typeActivity, hDebut, hFin, monLieu, maListeAstronautes, txtDescriptif);
+                    listActs.Add(monActivite);
 
-            //////////Lieu//////////
-            XmlNodeList nodeListeLieu = xmldoc.GetElementsByTagName("Lieux");
-            foreach (XmlNode nodeL in nodeListeLieu)
-            {
-                if (nodeL != null)
-                {
-                    XmlNodeList nodeLieuL = xmldoc.GetElementsByTagName("Lieu");
-
-                    foreach (XmlNode leLieu in nodeLieuL)
-                    {
-                        string NomLieu = leLieu.SelectSingleNode("Nom").InnerText;
-                        int X = int.Parse(leLieu.SelectSingleNode("Abscisse").InnerText);
-                        int Y = int.Parse(leLieu.SelectSingleNode("Ordonnee").InnerText);
-                        int idDuLieu = int.Parse(leLieu.SelectSingleNode("ID").InnerText);
-                        Lieu monlieu = new Lieu(NomLieu, X, Y);
-                        listeDeLieux.Add(monlieu);
-
-                    }
-
-                    //////////FinLieu////////
+                    if (!listeDeLieux.Contains(monLieu))
+                        listeDeLieux.Add(monLieu);
                 }
 
+                Jour j = new Jour(listActs, compteRendu);
+                listJours.Add(j);
             }
-            /////// Jour/////////
-            XmlNodeList nodeListeJour = xmldoc.GetElementsByTagName("Jours");
 
-            foreach (XmlNode nodeJ in nodeListeJour)
-            {
-                if (nodeJ != null)
-                {
-                    XmlNodeList nodeJourJ = xmldoc.GetElementsByTagName("Jour");
-
-                    foreach (XmlNode leJour in nodeJourJ)
-                    {
-                        string cptRendu = leJour.SelectSingleNode("Compte Rendu").InnerText;
-                        int idDuJour = int.Parse(leJour.SelectSingleNode("ID").InnerText);
-                        string etat = leJour.SelectSingleNode("Etat").InnerText;
-                        Jour J = new Jour(listeDesActivites, cptRendu);
-                        listeJourForm1.Add(J);
-                    }
-                }
-            }
-            /////////FinJour/////////
-
+            this.planning = new Planning(nom, listJours, dateDebut);
+            listeJourForm1 = listJours;
             return true;
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string message = "Veuillez enregistrer les changements avant de quitter.";
-            MessageBox.Show(message, "Sauvegarde", MessageBoxButtons.OKCancel);
-           
+  
 
-        }
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            enregistrerProjet();
         }
     }
-
+}
 

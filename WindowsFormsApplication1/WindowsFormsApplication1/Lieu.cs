@@ -56,5 +56,20 @@ public class Lieu
         string ch = "";
         return ch;
     }
+
+    public override bool Equals(object obj)
+    {
+        Lieu l = obj as Lieu;
+
+        if (l != null)
+        {
+            if (this.nomLieu.Equals(l.nomLieu))
+                if (this.coordonneX == l.coordonneX)
+                    if (this.coordonneY == l.coordonneY)
+                        return true;
+        }
+
+        return false;
+    }
 }
 
