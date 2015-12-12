@@ -74,7 +74,6 @@ H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsF
 H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
 H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
-<<<<<<< HEAD
 \\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
@@ -105,111 +104,6 @@ D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFor
 D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
 D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.nouveauLieuCarte.resources
 D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAfficherLieu.resources
-=======
-<<<<<<< Updated upstream
-H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-\\psf\Home\Desktop\181115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-\\psf\Home\Desktop\181115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-\\psf\Home\Desktop\ProjetInfo-Eckert-SimonazziTest\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-=======
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
->>>>>>> Stashed changes
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
-<<<<<<< HEAD
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
->>>>>>> origin/master
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources
-\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ModfierUneActivite.resources
-D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ModfierUneActivite.resources
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
 \\psf\Home\Desktop\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 \\psf\Home\Desktop\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
 \\psf\Home\Desktop\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
@@ -222,4 +116,3 @@ D:\Nicolas\Mes documents\ENSC\Prog\Project-Eckert-Simonazzi-Sauvetage\WindowsFor
 \\psf\Home\Desktop\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 \\psf\Home\Desktop\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
 \\psf\Home\Desktop\Project-Eckert-Simonazzi-Sauvetage\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.nouveauLieuCarte.resources
->>>>>>> origin/master
