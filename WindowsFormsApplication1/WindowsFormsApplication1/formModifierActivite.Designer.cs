@@ -58,6 +58,7 @@
             this.comboBoxHeureFin = new System.Windows.Forms.ComboBox();
             this.checkBoxLieu = new System.Windows.Forms.CheckBox();
             this.boutonAnnuler = new System.Windows.Forms.Button();
+            this.buttonAjouterParCarte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxCoordonnéesY
@@ -234,6 +235,7 @@
             this.labelLieuActivite.Size = new System.Drawing.Size(51, 20);
             this.labelLieuActivite.TabIndex = 44;
             this.labelLieuActivite.Text = "Lieu :";
+            this.labelLieuActivite.Click += new System.EventHandler(this.labelLieuActivite_Click);
             // 
             // labelPlageHoraireActivité
             // 
@@ -329,6 +331,7 @@
             this.checkBoxLieu.TabIndex = 70;
             this.checkBoxLieu.Text = "Ajouter un Lieu";
             this.checkBoxLieu.UseVisualStyleBackColor = true;
+            this.checkBoxLieu.CheckedChanged += new System.EventHandler(this.checkBoxLieu_CheckedChanged);
             // 
             // boutonAnnuler
             // 
@@ -340,11 +343,23 @@
             this.boutonAnnuler.UseVisualStyleBackColor = true;
             this.boutonAnnuler.Click += new System.EventHandler(this.boutonAnnuler_Click);
             // 
+            // buttonAjouterParCarte
+            // 
+            this.buttonAjouterParCarte.Location = new System.Drawing.Point(182, 379);
+            this.buttonAjouterParCarte.Name = "buttonAjouterParCarte";
+            this.buttonAjouterParCarte.Size = new System.Drawing.Size(144, 23);
+            this.buttonAjouterParCarte.TabIndex = 72;
+            this.buttonAjouterParCarte.Text = "Ajouter par carte";
+            this.buttonAjouterParCarte.UseVisualStyleBackColor = true;
+            this.buttonAjouterParCarte.Visible = false;
+            this.buttonAjouterParCarte.Click += new System.EventHandler(this.buttonAjouterParCarte_Click);
+            // 
             // formModifierActivite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 513);
+            this.Controls.Add(this.buttonAjouterParCarte);
             this.Controls.Add(this.boutonAnnuler);
             this.Controls.Add(this.checkBoxLieu);
             this.Controls.Add(this.label4);
@@ -415,5 +430,6 @@
         private System.Windows.Forms.ComboBox comboBoxHeureFin;
         private System.Windows.Forms.CheckBox checkBoxLieu;
         private System.Windows.Forms.Button boutonAnnuler;
+        private System.Windows.Forms.Button buttonAjouterParCarte;
     }
 }
